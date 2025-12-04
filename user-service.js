@@ -15,8 +15,6 @@ async function connectDB() {
   if (mongoose.connection.readyState === 1) return;
 
   return mongoose.connect(mongoDBConnectionString, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
     serverSelectionTimeoutMS: 10000,
     connectTimeoutMS: 10000,
     tls: true
